@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Nutrition - AI Logger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#c6c6c6",
+                      "surface-container-high": "#282a2b",
+                      "on-surface": "#e2e2e2",
+                      "outline": "#988e90",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#767575",
+                      "surface-container-low": "#1a1c1c",
+                      "inverse-on-surface": "#2f3131",
+                      "primary-container": "#000000",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-background": "#e2e2e2",
+                      "primary": "#c6c6c6",
+                      "on-primary-container": "#757575",
+                      "surface-dim": "#121414",
+                      "on-secondary": "#313030",
+                      "secondary-container": "#4a4949",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "background": "#121414",
+                      "tertiary-fixed": "#e5e2e1",
+                      "outline-variant": "#4c4546",
+                      "on-secondary-container": "#bab8b7",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "tertiary": "#c8c6c5",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "surface-container-highest": "#333535",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary": "#303030",
+                      "surface-container": "#1e2020",
+                      "on-surface-variant": "#cfc4c5",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-primary": "#5e5e5e",
+                      "surface": "#121414",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#333535",
+                      "tertiary-container": "#000000",
+                      "secondary": "#c9c6c5",
+                      "on-tertiary": "#313030",
+                      "primary-fixed": "#e2e2e2",
+                      "inverse-surface": "#e2e2e2",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface-container-lowest": "#0c0f0f",
+                      "surface-bright": "#38393a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "container-max": "720px",
+                      "sm": "8px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "xl": "40px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-data": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "label-muted": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-data": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.06em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-muted": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #000000; /* Level 0 Base */
+            color: #e2e2e2;
+        }
+        .card-surface {
+            background-color: #0B0B0B; /* Level 1 Surface */
+            border: 1px solid #242424;
+        }
+        .popover-surface {
+            background-color: #111111; /* Level 2 Interaction */
+        }
+        
+        /* Custom scrollbar for multi-line input */
+        textarea::-webkit-scrollbar {
+            width: 4px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #242424;
+            border-radius: 4px;
+        }
+        textarea:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .pulse-skeleton {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .3; }
+        }
+    </style>
+</head>
+<body class="font-body-lg text-body-lg antialiased min-h-screen flex flex-col items-center pb-safe">
+<!-- TopAppBar -->
+<header class="w-full bg-background dark:bg-background docked full-width top-0 flat no shadows flex justify-between items-center px-lg py-md max-w-container-max mx-auto md:max-w-[430px] z-50">
+<h1 class="text-headline-md font-headline-md font-semibold tracking-tight text-on-surface dark:text-on-surface">Aura Nutrition</h1>
+<div class="flex gap-4">
+<button class="hover:opacity-80 transition-opacity flex items-center justify-center w-10 h-10 rounded-full popover-surface border border-[#242424]">
+<span class="material-symbols-outlined text-primary dark:text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 300;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas (Constrained for mobile-feel) -->
+<main class="w-full max-w-[430px] px-lg flex-1 flex flex-col pt-xl pb-[100px]">
+<!-- Header -->
+<section class="mb-xl">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface mb-2">What did you eat?</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Log your meal using natural language or voice.</p>
+</section>
+<!-- Input Area -->
+<section class="relative flex-1 flex flex-col min-h-[300px]">
+<!-- Textarea container -->
+<div class="card-surface rounded-xl p-lg flex-1 flex flex-col relative transition-colors duration-300 focus-within:border-surface-tint/30">
+<textarea class="w-full h-full bg-transparent border-none text-body-lg font-body-lg text-on-surface placeholder-on-surface-variant/50 resize-none flex-1 pb-[60px]" id="mealInput" placeholder="e.g., I had two poached eggs on sourdough with half an avocado..."></textarea>
+<!-- Controls anchored to bottom of card -->
+<div class="absolute bottom-lg left-lg right-lg flex justify-between items-center">
+<button aria-label="Voice input" class="w-12 h-12 rounded-full popover-surface border border-[#242424] flex items-center justify-center text-on-surface hover:text-white hover:border-surface-tint/30 transition-all group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0, 'wght' 200;">mic</span>
+</button>
+<button class="bg-white text-black font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-surface-tint transition-colors uppercase tracking-wider" id="logBtn">
+                        Log Meal
+                    </button>
+</div>
+</div>
+<!-- AI Feedback (Initially Hidden/Placeholder state) -->
+<div class="mt-lg card-surface rounded-xl p-lg hidden" id="aiFeedback">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-surface-tint pulse-skeleton" style="font-variation-settings: 'FILL' 1, 'wght' 400;">robot_2</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Parsing your meal...</span>
+</div>
+<!-- Skeleton lines -->
+<div class="space-y-3">
+<div class="h-2 bg-[#242424] rounded-full w-3/4 pulse-skeleton"></div>
+<div class="h-2 bg-[#242424] rounded-full w-1/2 pulse-skeleton" style="animation-delay: 0.1s"></div>
+<div class="h-2 bg-[#242424] rounded-full w-5/6 pulse-skeleton" style="animation-delay: 0.2s"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-lg py-md pb-safe border-t border-outline-variant dark:border-outline-variant bg-surface-container-low md:max-w-container-max md:mx-auto md:left-1/2 md:-translate-x-1/2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0, 'wght' 300;">home</span>
+<span class="text-label-caps font-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0, 'wght' 300;">search</span>
+<span class="text-label-caps font-label-caps">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0, 'wght' 300;">star</span>
+<span class="text-label-caps font-label-caps">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary scale-110 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1, 'wght' 400;">mic</span>
+<span class="text-label-caps font-label-caps">AI</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0, 'wght' 300;">settings</span>
+<span class="text-label-caps font-label-caps">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple interaction to show AI feedback state
+        document.getElementById('logBtn').addEventListener('click', function() {
+            const input = document.getElementById('mealInput').value;
+            if (input.trim() !== "") {
+                document.getElementById('aiFeedback').classList.remove('hidden');
+                // Simulate loading state then reset for demo purposes
+                setTimeout(() => {
+                    document.getElementById('mealInput').value = '';
+                    document.getElementById('aiFeedback').classList.add('hidden');
+                }, 3000);
+            }
+        });
+    </script>
+</body></html>

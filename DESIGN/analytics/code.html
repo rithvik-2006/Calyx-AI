@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Nutrition - Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#c6c6c6",
+                        "surface-container-high": "#282a2b",
+                        "on-surface": "#e2e2e2",
+                        "outline": "#988e90",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#767575",
+                        "surface-container-low": "#1a1c1c",
+                        "inverse-on-surface": "#2f3131",
+                        "primary-container": "#000000",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary-container": "#757575",
+                        "surface-dim": "#121414",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#4a4949",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "background": "#121414",
+                        "tertiary-fixed": "#e5e2e1",
+                        "outline-variant": "#4c4546",
+                        "on-secondary-container": "#bab8b7",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container-highest": "#333535",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary": "#303030",
+                        "surface-container": "#1e2020",
+                        "on-surface-variant": "#cfc4c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#5e5e5e",
+                        "surface": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#333535",
+                        "tertiary-container": "#000000",
+                        "secondary": "#c9c6c5",
+                        "on-tertiary": "#313030",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-bright": "#38393a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "container-max": "720px",
+                        "sm": "8px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "xl": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-data": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-muted": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-data": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "1.2", "letterSpacing": "0.06em", "fontWeight": "600" }],
+                        "label-muted": ["12px", { "lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #e2e2e2; }
+        .card { background-color: #0B0B0B; border: 1px solid #242424; }
+        .card:hover { border-color: rgba(247, 247, 247, 0.15); transition: border-color 0.2s ease; }
+        .progress-track { background-color: #1A1A1A; }
+        .progress-bar { background-color: #e2e2e2; }
+        .list-item-border { border-bottom: 1px solid #242424; }
+        .list-item-border:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="font-body-lg antialiased pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background border-b-0 hidden md:block w-full fixed top-0 z-50">
+<div class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+<h1 class="text-headline-md font-headline-md font-semibold tracking-tight text-on-surface dark:text-on-surface">Aura Nutrition</h1>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary hover:opacity-80 transition-opacity cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-gutter md:px-lg pt-md md:pt-xl mt-0 md:mt-16 mb-xl">
+<header class="mb-xl md:hidden">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface">Analytics</h1>
+</header>
+<section class="space-y-md mb-xl">
+<!-- Streak Counter -->
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">14 DAY STREAK</span>
+</div>
+<!-- Big Cards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Weekly Calories -->
+<article class="card rounded-xl p-lg flex flex-col justify-between min-h-[200px]">
+<h2 class="text-label-caps font-label-caps text-on-surface-variant mb-auto">WEEKLY CALORIES</h2>
+<div>
+<div class="text-display-data font-display-data text-on-surface mb-xs">14,250</div>
+<p class="text-body-sm font-body-sm text-outline">Avg 2,035 / day</p>
+</div>
+<!-- Minimal Chart Representation -->
+<div class="mt-md flex items-end gap-2 h-16 w-full opacity-70">
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 60%"></div>
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 80%"></div>
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 40%"></div>
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 90%"></div>
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 70%"></div>
+<div class="bg-surface-tint w-1/7 rounded-t-sm" style="height: 50%"></div>
+<div class="bg-primary w-1/7 rounded-t-sm" style="height: 100%"></div>
+</div>
+</article>
+<!-- Protein Average -->
+<article class="card rounded-xl p-lg flex flex-col justify-between min-h-[200px]">
+<h2 class="text-label-caps font-label-caps text-on-surface-variant mb-auto">PROTEIN AVERAGE</h2>
+<div>
+<div class="text-display-data font-display-data text-on-surface mb-xs">142g</div>
+<p class="text-body-sm font-body-sm text-outline">Goal: 150g / day</p>
+</div>
+<!-- Progress Arc Representation (Linear for minimalism) -->
+<div class="mt-md w-full">
+<div class="h-1 w-full progress-track rounded-full overflow-hidden">
+<div class="h-full progress-bar rounded-full" style="width: 94%"></div>
+</div>
+<div class="flex justify-between mt-sm text-label-muted font-label-muted text-on-surface-variant">
+<span>0g</span>
+<span>150g</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Most Eaten Foods -->
+<section class="card rounded-xl p-lg mb-xl">
+<h2 class="text-label-caps font-label-caps text-on-surface-variant mb-lg">MOST EATEN FOODS</h2>
+<ul class="flex flex-col">
+<li class="py-md list-item-border flex items-center justify-between group">
+<div class="w-1/2">
+<span class="text-body-lg font-body-lg text-on-surface block mb-xs group-hover:text-primary transition-colors">Chicken Breast</span>
+<span class="text-label-muted font-label-muted text-outline">12 times this week</span>
+</div>
+<div class="w-1/3 flex items-center">
+<div class="h-1 w-full progress-track rounded-full overflow-hidden">
+<div class="h-full progress-bar rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</li>
+<li class="py-md list-item-border flex items-center justify-between group">
+<div class="w-1/2">
+<span class="text-body-lg font-body-lg text-on-surface block mb-xs group-hover:text-primary transition-colors">Oatmeal</span>
+<span class="text-label-muted font-label-muted text-outline">10 times this week</span>
+</div>
+<div class="w-1/3 flex items-center">
+<div class="h-1 w-full progress-track rounded-full overflow-hidden">
+<div class="h-full progress-bar rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</li>
+<li class="py-md list-item-border flex items-center justify-between group">
+<div class="w-1/2">
+<span class="text-body-lg font-body-lg text-on-surface block mb-xs group-hover:text-primary transition-colors">Greek Yogurt</span>
+<span class="text-label-muted font-label-muted text-outline">8 times this week</span>
+</div>
+<div class="w-1/3 flex items-center">
+<div class="h-1 w-full progress-track rounded-full overflow-hidden">
+<div class="h-full progress-bar rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</li>
+<li class="py-md list-item-border flex items-center justify-between group">
+<div class="w-1/2">
+<span class="text-body-lg font-body-lg text-on-surface block mb-xs group-hover:text-primary transition-colors">Almonds</span>
+<span class="text-label-muted font-label-muted text-outline">5 times this week</span>
+</div>
+<div class="w-1/3 flex items-center">
+<div class="h-1 w-full progress-track rounded-full overflow-hidden">
+<div class="h-full progress-bar rounded-full" style="width: 30%"></div>
+</div>
+</div>
+</li>
+</ul>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-lg py-md pb-safe border-t-0 bg-surface-container-low dark:bg-surface-container-low">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-xs">home</span>
+<span class="text-label-caps font-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary scale-110 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-xs">search</span>
+<span class="text-label-caps font-label-caps">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-xs">star</span>
+<span class="text-label-caps font-label-caps">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-xs">mic</span>
+<span class="text-label-caps font-label-caps">AI</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-xs">settings</span>
+<span class="text-label-caps font-label-caps">Settings</span>
+</a>
+</nav>
+</body></html>

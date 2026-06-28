@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Aura Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#c6c6c6",
+                      "surface-container-high": "#282a2b",
+                      "on-surface": "#e2e2e2",
+                      "outline": "#988e90",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#767575",
+                      "surface-container-low": "#1a1c1c",
+                      "inverse-on-surface": "#2f3131",
+                      "primary-container": "#000000",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-background": "#e2e2e2",
+                      "primary": "#c6c6c6",
+                      "on-primary-container": "#757575",
+                      "surface-dim": "#121414",
+                      "on-secondary": "#313030",
+                      "secondary-container": "#4a4949",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "background": "#121414",
+                      "tertiary-fixed": "#e5e2e1",
+                      "outline-variant": "#4c4546",
+                      "on-secondary-container": "#bab8b7",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "tertiary": "#c8c6c5",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "surface-container-highest": "#333535",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary": "#303030",
+                      "surface-container": "#1e2020",
+                      "on-surface-variant": "#cfc4c5",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-primary": "#5e5e5e",
+                      "surface": "#121414",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#333535",
+                      "tertiary-container": "#000000",
+                      "secondary": "#c9c6c5",
+                      "on-tertiary": "#313030",
+                      "primary-fixed": "#e2e2e2",
+                      "inverse-surface": "#e2e2e2",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface-container-lowest": "#0c0f0f",
+                      "surface-bright": "#38393a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "container-max": "720px",
+                      "sm": "8px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "xl": "40px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-data": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "label-muted": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-data": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.06em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-muted": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom styles for high-end minimal feel */
+        body {
+            background-color: #000000;
+        }
+        .input-minimal {
+            background-color: rgba(17, 17, 17, 0.8);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .input-minimal:focus {
+            border-bottom: 1px solid #ffffff;
+            outline: none;
+            box-shadow: none;
+            background-color: rgba(26, 28, 28, 0.9);
+        }
+        .input-minimal::placeholder {
+            color: #757575;
+        }
+    </style>
+</head>
+<body class="bg-[#000000] text-on-surface antialiased min-h-screen flex flex-col items-center justify-center font-body-lg">
+<!-- Container for mobile-width content centered -->
+<main class="w-full max-w-[430px] px-lg py-xl flex flex-col justify-center min-h-[1024px]">
+<!-- Logo Header -->
+<div class="flex flex-col items-center mb-xl w-full text-center">
+<span class="material-symbols-outlined text-[48px] text-on-surface mb-lg" data-icon="eco">eco</span>
+<h1 class="font-display-data text-display-data text-on-surface mb-sm tracking-tighter">Welcome Back</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Sign in to continue to Aura Nutrition.</p>
+</div>
+<!-- Login Form -->
+<form action="#" class="w-full flex flex-col gap-md" id="login-form" method="POST">
+<div class="flex flex-col gap-xs relative">
+<label class="sr-only" for="email">Email address</label>
+<input class="input-minimal w-full px-md py-lg rounded-xl text-on-surface font-body-lg appearance-none" id="email" name="email" placeholder="Email address" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-xs relative">
+<label class="sr-only" for="password">Password</label>
+<div class="relative w-full">
+<input class="input-minimal w-full px-md py-lg rounded-xl text-on-surface font-body-lg appearance-none pr-[50px]" id="password" name="password" placeholder="Password" required="" type="password"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface transition-colors" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility_off">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end mt-sm mb-lg">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-[#FFFFFF] text-[#000000] font-headline-md text-headline-md py-[18px] rounded-[24px] hover:bg-opacity-90 transition-all duration-300 transform active:scale-[0.98] mt-sm flex items-center justify-center gap-sm" type="submit">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Sign Up Link -->
+<div class="mt-xl text-center w-full">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Don't have an account? 
+                <a class="text-on-surface font-medium hover:underline underline-offset-4 ml-sm" href="#">Sign up</a>
+</p>
+</div>
+</main>
+<script>
+        // Simple password toggle logic
+        document.getElementById('toggle-password').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const iconSpan = this.querySelector('.material-symbols-outlined');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                iconSpan.textContent = 'visibility';
+                iconSpan.setAttribute('data-icon', 'visibility');
+            } else {
+                passwordInput.type = 'password';
+                iconSpan.textContent = 'visibility_off';
+                iconSpan.setAttribute('data-icon', 'visibility_off');
+            }
+        });
+    </script>
+</body></html>

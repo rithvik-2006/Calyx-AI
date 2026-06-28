@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weight Progress - Aura Nutrition</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#c6c6c6",
+                        "surface-container-high": "#282a2b",
+                        "on-surface": "#e2e2e2",
+                        "outline": "#988e90",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#767575",
+                        "surface-container-low": "#1a1c1c",
+                        "inverse-on-surface": "#2f3131",
+                        "primary-container": "#000000",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#e2e2e2",
+                        "primary": "#c6c6c6",
+                        "on-primary-container": "#757575",
+                        "surface-dim": "#121414",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#4a4949",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "background": "#121414",
+                        "tertiary-fixed": "#e5e2e1",
+                        "outline-variant": "#4c4546",
+                        "on-secondary-container": "#bab8b7",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container-highest": "#333535",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary": "#303030",
+                        "surface-container": "#1e2020",
+                        "on-surface-variant": "#cfc4c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#5e5e5e",
+                        "surface": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#333535",
+                        "tertiary-container": "#000000",
+                        "secondary": "#c9c6c5",
+                        "on-tertiary": "#313030",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-bright": "#38393a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "container-max": "720px",
+                        "sm": "8px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "xl": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-data": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-muted": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-data": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "1.2", "letterSpacing": "0.06em", "fontWeight": "600" }],
+                        "label-muted": ["12px", { "lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle grid background for the canvas */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(152, 142, 144, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(152, 142, 144, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg text-body-lg antialiased min-h-screen flex flex-col selection:bg-primary selection:text-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 bg-background dark:bg-background">
+<div class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+<span class="text-headline-md font-headline-md font-semibold tracking-tight text-on-surface dark:text-on-surface">Aura Nutrition</span>
+<div class="flex items-center gap-sm">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200 p-sm rounded-full bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-primary dark:text-primary block leading-none">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-lg pt-lg pb-32 flex flex-col gap-xl">
+<!-- Hero: Main Display -->
+<section class="flex flex-col items-center justify-center text-center mt-md">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-sm">Current Weight</span>
+<div class="flex items-baseline gap-xs">
+<h1 class="font-display-data text-display-data text-on-surface tabular-nums tracking-tighter">78.4</h1>
+<span class="font-headline-md text-headline-md text-on-surface-variant">kg</span>
+</div>
+<div class="mt-sm inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container border border-outline-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">trending_down</span>
+<span class="font-label-muted text-label-muted text-primary">-1.2 kg this week</span>
+</div>
+</section>
+<!-- Chart Section -->
+<section class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-lg relative overflow-hidden group hover:border-outline transition-colors duration-300">
+<div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+<div class="relative z-10 flex justify-between items-center mb-lg">
+<span class="font-label-caps text-label-caps text-on-surface">Progress</span>
+<span class="font-label-muted text-label-muted text-on-surface-variant">Last 30 Days</span>
+</div>
+<!-- Minimal SVG Line Graph -->
+<div class="w-full aspect-[2/1] relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 50">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop class="text-primary" offset="0%" stop-color="currentColor" stop-opacity="0.15"></stop>
+<stop class="text-primary" offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines (Horizontal only) -->
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.2" x1="0" x2="100" y1="10" y2="10"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.2" x1="0" x2="100" y1="25" y2="25"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.2" x1="0" x2="100" y1="40" y2="40"></line>
+<!-- Data Area -->
+<path d="M0,40 Q10,38 20,35 T40,25 T60,28 T80,15 T100,10 L100,50 L0,50 Z" fill="url(#chartGradient)"></path>
+<!-- Data Line -->
+<path class="text-primary" d="M0,40 Q10,38 20,35 T40,25 T60,28 T80,15 T100,10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<!-- Data Points (Subtle) -->
+<circle class="text-primary" cx="80" cy="15" fill="currentColor" r="1.5"></circle>
+<circle class="text-primary" cx="100" cy="10" fill="currentColor" r="1.5"></circle>
+</svg>
+</div>
+<!-- Axis Labels -->
+<div class="flex justify-between mt-sm font-label-muted text-label-muted text-on-surface-variant opacity-60">
+<span>Oct 1</span>
+<span>Oct 15</span>
+<span>Oct 31</span>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-md">
+<!-- Weekly Average -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-lg flex flex-col gap-sm hover:border-outline transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Weekly Avg</span>
+<div class="flex items-baseline gap-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">78.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</div>
+</div>
+<!-- Monthly Average -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-lg flex flex-col gap-sm hover:border-outline transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Monthly Avg</span>
+<div class="flex items-baseline gap-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">79.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</div>
+</div>
+</section>
+<!-- Consistency Score -->
+<section class="bg-surface-container-low border border-outline-variant rounded-xl p-lg flex flex-col gap-md">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Consistency Score</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Based on daily weigh-ins</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary">85%</span>
+</div>
+<!-- Minimal Progress Line -->
+<div class="w-full h-[2px] bg-surface-container-highest rounded-full overflow-hidden mt-xs">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out w-[85%]"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 border-t border-outline-variant dark:border-outline-variant bg-surface-container-low dark:bg-surface-container-low px-lg py-md pb-safe">
+<div class="flex justify-around items-center max-w-container-max mx-auto">
+<!-- Home (Active) -->
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary scale-110 active:scale-90 duration-200 transition-transform">
+<span class="material-symbols-outlined fill block leading-none mb-xs">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</button>
+<!-- Search -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary hover:opacity-100 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined block leading-none mb-xs">search</span>
+<span class="font-label-caps text-label-caps">Search</span>
+</button>
+<!-- Favorites -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary hover:opacity-100 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined block leading-none mb-xs">star</span>
+<span class="font-label-caps text-label-caps">Favorites</span>
+</button>
+<!-- AI -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary hover:opacity-100 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined block leading-none mb-xs">mic</span>
+<span class="font-label-caps text-label-caps">AI</span>
+</button>
+<!-- Settings -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary hover:opacity-100 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined block leading-none mb-xs">settings</span>
+<span class="font-label-caps text-label-caps">Settings</span>
+</button>
+</div>
+</nav>
+</body></html>
