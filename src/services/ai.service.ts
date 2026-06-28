@@ -47,8 +47,14 @@ Speak naturally, as if chatting on a messenger app.`
 
     if (!response.ok) {
       const errorData = await response.text();
-      console.error('NVIDIA NIM API Error:', errorData);
-      throw new Error('Failed to generate response from AI provider.');
+      console.error('NVIDIA NIM API Error:', response.status, errorData);
+      
+      try {
+        const parsedError = JSON.parse(errorData);
+        throw new Error(`AI Provider Error: ${parsedError.detail || parsedError.message || response.statusText}`);
+      } catch (e) {
+        throw new Error(`AI Provider Error: ${response.status} ${response.statusText}`);
+      }
     }
 
     const data = await response.json();
