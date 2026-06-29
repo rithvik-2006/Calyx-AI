@@ -7,7 +7,8 @@ export class AIService {
   private static NIM_API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
   
   private static get apiKey() {
-    return process.env.NVIDIA_API_KEY || process.env.NIM_API_KEY;
+    const key = process.env.NVIDIA_API_KEY || process.env.NIM_API_KEY;
+    return key?.trim();
   }
 
   private static get systemPrompt(): ChatMessage {
@@ -27,6 +28,14 @@ Speak naturally, as if chatting on a messenger app.`
     if (!key) {
       throw new Error('NVIDIA API Key is missing. Please configure it in your environment variables.');
     }
+
+    // Diagnostic logging for production debugging (helps identify mismatched keys on Vercel)
+    console.log('[NVIDIA NIM API Debug]', {
+      hasKey: !!key,
+      first5: key.slice(0, 5),
+      length: key.length,
+      envVarSource: process.env.NVIDIA_API_KEY ? 'NVIDIA_API_KEY' : 'NIM_API_KEY'
+    });
 
     // Ensure the system prompt is always injected first
     const fullConversation = [this.systemPrompt, ...messages];
